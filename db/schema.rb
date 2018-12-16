@@ -10,12 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_16_133256) do
+ActiveRecord::Schema.define(version: 2018_12_16_152927) do
 
   create_table "categorias", force: :cascade do |t|
     t.string "descricao"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "escolas", force: :cascade do |t|
+    t.string "nome"
+  end
+
+  create_table "periodos", force: :cascade do |t|
+    t.string "descricao"
   end
 
   create_table "professores", force: :cascade do |t|
