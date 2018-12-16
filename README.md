@@ -1,24 +1,20 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Este projeto consiste em um trabalho acadêmico para a disciplina de Projeto Integrador, bimestres 5 e 6, do curso de Engenharia da Computação da Univesp.
 
-Things you may want to cover:
+Tema: Sistema para Informatização do Processo de Atribuição de Aulas da Secretaria Municipal de Educação de Assis
 
-* Ruby version
+Nome do protóripo: InfoEduc
 
-* System dependencies
+Estudantes:
+FELIPPE GABRIEL PANUCI
+ISSAO HANAOKA JUNIOR
+KALLIANDRU JIVAGO P. M. C. DE OLIVEIRA
+MARIANA DO VALE MORAES
+RONALDO KOZO SAIMI
+SUELI FRANCISCA DA SILVA
 
-* Configuration
+Orientador:
+PROF. VALDEMIR DA PAIXÃO
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Dezembro de 2018
