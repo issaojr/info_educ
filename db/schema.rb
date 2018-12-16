@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_15_133543) do
+ActiveRecord::Schema.define(version: 2018_12_16_065213) do
+
+  create_table "categorias", force: :cascade do |t|
+    t.string "descricao"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "professores", force: :cascade do |t|
     t.string "nome"
