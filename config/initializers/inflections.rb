@@ -14,3 +14,10 @@
 # ActiveSupport::Inflector.inflections(:en) do |inflect|
 #   inflect.acronym 'RESTful'
 # end
+ActiveSupport::Inflector.inflections(:en) do |inflect|
+    inflect.irregular 'professor', 'professores'
+    inflect.irregular 'categoria', 'categorias'
+    inflect.irregular 'sala', 'salas'
+    inflect.irregular 'escola', 'escolas'
+    inflect.irregular 'periodo', 'periodos'
+end

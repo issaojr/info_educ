@@ -1,0 +1,90 @@
+<div class="container">
+
+  <div class="page-header">
+    <h1>Cadastro de professor</h1>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-8">
+      <h3>Professor Efetivo</h3>
+
+      <%= form_with(model: professor, local: true) do |form| %>
+      <% if professor.errors.any? %>
+      <div id="error_explanation">
+        <h2>
+          <%= pluralize(professor.errors.count, "error") %> não foi possível salvar este professor:</h2>
+
+        <ul>
+          <% professor.errors.full_messages.each do |message| %>
+          <li>
+            <%= message %>
+          </li>
+          <% end %>
+        </ul>
+      </div>
+      <% end %>
+
+      <!--
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome %>
+  </div>
+
+  <div class="field">
+    <%= form.label :registro %>
+    <%= form.number_field :registro %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nota_prova %>
+    <%= form.number_field :nota_prova %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pontuacao %>
+    <%= form.number_field :pontuacao %>
+  </div>
+
+  <div class="field">
+    <%= form.label :categoria %>
+    <%= form.number_field :categoria %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>-->
+
+
+      <div class="form-group">
+        <%= form.label :nome %>
+        <%= form.text_field :nome, class: "form-control" %>
+        <!--<label for="nome">Nome</label>
+    <input type="text" class="form-control" id="nome">-->
+      </div>
+
+      <div class="form-group">
+        <%= form.label :registro %>
+        <%= form.number_field :registro, class:"form-control" %>
+      </div>
+
+      <div class="form-group">
+        <%= form.label :pontuacao %>
+        <%= form.number_field :pontuacao, class:"form-control" %>
+
+      </div>
+
+
+
+    </div>
+    <%= link_to 'Voltar', professores_path, class:"btn btn-default" %>
+    <%= form.submit "Cadastrar", class:"btn btn-default" %>
+    
+    <% end %>
+  </div>
+
+</div>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="bootstrap/js/bootstrap.min.js"></script>
