@@ -1,0 +1,2 @@
+module ProfessoresTemporariosHelper
+end

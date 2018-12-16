@@ -1,9 +1,10 @@
-class ProfessoresController < ApplicationController
+class ProfessoresTemporariosController < ApplicationController
   before_action :set_professor, only: [:show, :edit, :update, :destroy]
 
   # GET /professores
   # GET /professores.json
   def index
+    @professores = Professor.all.where(:categoria => 2)
     @professores = Professor.all
   end
 
@@ -15,6 +16,7 @@ class ProfessoresController < ApplicationController
   # GET /professores/new
   def new
     @professor = Professor.new
+    @professor.categoria = 2
   end
 
   # GET /professores/1/edit
@@ -25,6 +27,7 @@ class ProfessoresController < ApplicationController
   # POST /professores.json
   def create
     @professor = Professor.new(professor_params)
+    @professor.categoria = 2
 
     respond_to do |format|
       if @professor.save
@@ -56,7 +59,7 @@ class ProfessoresController < ApplicationController
   def destroy
     @professor.destroy
     respond_to do |format|
-      format.html { redirect_to professores_url, notice: 'Professor excluído.' }
+      format.html { redirect_to professores_temporario_url, notice: 'Professor excluído.' }
       format.json { head :no_content }
     end
   end

@@ -1,2 +1,24 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+
+    
+    <div class="container">
+      
+      <div class="page-header">
+        <h1>Sistema de Atribuição de aula</h1>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <h3>Opções</h3>
+          <%= link_to 'Cadastrar Professor', professores_path, class:"btn btn-default btn-block" %>          
+          <br />
+          <%= link_to 'Atribuição Para Professores Efetivos', professores_path, class:"btn btn-default btn-block" %>
+          <br />
+          <%= link_to 'Atribuição Para Professores Temporários', professores_path, class:"btn btn-default btn-block" %>
+          <br />
+          <%= link_to 'Consultar Atribuições', professores_path, class:"btn btn-default btn-block" %>
+          <br />
+         
+        </div>
+      
+
+    </div>

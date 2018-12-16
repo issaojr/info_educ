@@ -6,7 +6,7 @@
 
   <div class="row">
     <div class="col-sm-8">
-      <h3>Professor Efetivo</h3>
+      <h3>Professor Temporário</h3>
 
       <%= form_with(model: professor, local: true) do |form| %>
       <% if professor.errors.any? %>
@@ -39,17 +39,17 @@
         <%= form.label :nota_prova %>
         <%= form.number_field :nota_prova %>
       </div>
-    
+
       <div class="field">
         <%= form.label :pontuacao %>
         <%= form.number_field :pontuacao %>
       </div>
-
+<!--
       <div class="field">
         <%= form.label :categoria %>
         <%= form.number_field :categoria %>
       </div>
-
+    -->
       <div class="actions">
         <%= form.submit %>
       </div>
