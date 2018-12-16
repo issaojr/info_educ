@@ -1,5 +1,6 @@
 class ProfessoresController < ApplicationController
   before_action :set_professor, only: [:show, :edit, :update, :destroy]
+  before_action :set_categoria_options, only: [:new, :update, :edit, :create]
 
   # GET /professores
   # GET /professores.json
@@ -24,7 +25,12 @@ class ProfessoresController < ApplicationController
   # POST /professores
   # POST /professores.json
   def create
+    puts "**********" + professor_params.to_s
+    categoria = Categoria.find(1)
+    professor_params[:categoria] = categoria
+    puts "**********" + professor_params.to_s
     @professor = Professor.new(professor_params)
+
 
     respond_to do |format|
       if @professor.save
@@ -69,6 +75,10 @@ class ProfessoresController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def professor_params
-      params.require(:professor).permit(:nome, :registro, :nota_prova, :pontuacao, :categoria)
+      params.require(:professor).permit(:nome, :registro, :nota_prova, :pontuacao, :categoria_id)
+    end
+
+    def set_categoria_options
+      @categoria_options = Categoria.all.pluck(:descricao, :id)
     end
 end

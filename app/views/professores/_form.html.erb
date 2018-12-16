@@ -47,7 +47,8 @@
 
       <div class="field">
         <%= form.label :categoria %>
-        <%= form.number_field :categoria %>
+        <%= form.select :categoria_id, @categoria_options, {include_blank: "Selecione..."} %>
+        <!--<%= form.number_field :categoria %>-->
       </div>
 
       <div class="actions">

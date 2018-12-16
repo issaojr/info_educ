@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_16_065213) do
+ActiveRecord::Schema.define(version: 2018_12_16_133256) do
 
   create_table "categorias", force: :cascade do |t|
     t.string "descricao"
@@ -23,9 +23,10 @@ ActiveRecord::Schema.define(version: 2018_12_16_065213) do
     t.integer "registro"
     t.integer "nota_prova"
     t.integer "pontuacao"
-    t.integer "categoria"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "categoria_id"
+    t.index ["categoria_id"], name: "index_professores_on_categoria_id"
   end
 
 end

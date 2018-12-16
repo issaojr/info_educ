@@ -5,7 +5,6 @@ class CreateProfessores < ActiveRecord::Migration[5.2]
       t.integer :registro
       t.integer :nota_prova
       t.integer :pontuacao
-      t.integer :categoria
 
       t.timestamps
     end
