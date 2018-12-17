@@ -1,7 +1,7 @@
-class AtribuicaoEscolaController < ApplicationController
+class AtribuicaoSecretariaController < ApplicationController
     def index
-        cat_efetivo = Categoria.find_by(descricao: 'Efetivo')
-        p = Professor.all.where(:categoria => cat_efetivo).order(pontuacao: :desc)
+        cat_temporario = Categoria.find_by(descricao: 'Temporário')
+        p = Professor.all.where(:categoria => cat_temporario).order(nota_prova: :desc)
 
         @professores = Array.new
 
@@ -13,7 +13,7 @@ class AtribuicaoEscolaController < ApplicationController
     end
 
     def show
-         @professor = Professor.find(params[:professor])
+        @professor = Professor.find(params[:professor])
          @sala = Sala.find(params[:sala]) 
              
         if @sala.professor == nil 
@@ -25,8 +25,6 @@ class AtribuicaoEscolaController < ApplicationController
             
         end
         @sala.save
-   
-        
     end
 
     def edit
@@ -34,8 +32,8 @@ class AtribuicaoEscolaController < ApplicationController
        # @professor = Professor.new(professor_params)
         @professor = Professor.find(params[:id])
 
-        escola_sede = Escola.find_by(nome: 'EMEIF Mohandas Karamchand Gandhi')
-        @salas = Sala.all.where(:escola => escola_sede)
+      
+        @salas = Sala.all
     end
 
     def atribuir_sala 
@@ -58,12 +56,5 @@ class AtribuicaoEscolaController < ApplicationController
 
     def sala_params
         params.require(:sala).permit(:nome, :periodo_id, :escola_id, :professor_id)
-      end
-
-      def destroy 
-        @professor = Professor.find(params[:professor])
-        @sala = Sala.find(params[:sala])        
-           @sala.professor = nil        
-        @sala.save
       end
 end

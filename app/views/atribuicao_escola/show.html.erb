@@ -1,0 +1,10 @@
+
+<% if @sala.professor == nil %>
+    <p>Atribuição Cancelada.</p>
+    <% else %>
+<p>Sala <%= @sala.descricao %> da Escola <%= @sala.escola.nome %> foi atribuída ao Professor <strong><%= @sala.professor.nome %></strong></p>
+<% end %>
+
+
+
+

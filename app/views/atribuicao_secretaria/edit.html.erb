@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <h4><%= "Professor: " + @professor.nome + " | Reg. nº " + @professor.registro.to_s + " | Cat: " + @professor.categoria.descricao %> </h4>
 
 <table class="table table-striped table-bordered table-hover table-condensed">
@@ -8,7 +6,7 @@
             <th>Descrição</th>
             <th>Escola</th>
             <th>Período</th> 
-            <th>Professor</th>      
+            <th>Professor</th>          
             <th></th>
           </tr>
         </thead>
@@ -20,7 +18,8 @@
               <td><%= s.escola.nome %></td>
               <td><%= s.periodo.descricao %></td>
               <td><%= (s.professor == nil)? "<DISPONÍVEL>" : s.professor.nome %></td>
-              <td><%= s.professor == nil ? (link_to 'Atribuir', atribuicao_escola_path(:professor => @professor, :sala => s)) : (link_to 'Cancelar', atribuicao_escola_path(:professor => @professor, :sala => s)) %></td>
+              <td><%= s.professor == nil ? (link_to 'Atribuir', atribuicao_secretarium_path(:professor => @professor, :sala => s)) : (link_to 'Cancelar', atribuicao_secretarium_path(:professor => @professor, :sala => s)) %></td>
+              
             </tr>
           <% end %>
         </tbody>

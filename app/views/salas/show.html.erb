@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @sala.descricao %>
+</p>
+
+<p>
+  <strong>Escola:</strong>
+  <%= @sala.escola %>
+</p>
+
+<p>
+  <strong>Periodo:</strong>
+  <%= @sala.periodo %>
+</p>
+
+<p>
+  <strong>Professor:</strong>
+  <%= @sala.professor %>
+</p>
+
+<%= link_to 'Edit', edit_sala_path(@sala) %> |
+<%= link_to 'Back', salas_path %>

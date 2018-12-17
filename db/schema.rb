@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_16_155624) do
+ActiveRecord::Schema.define(version: 2018_12_17_063759) do
 
   create_table "categorias", force: :cascade do |t|
     t.string "descricao"
@@ -42,6 +42,8 @@ ActiveRecord::Schema.define(version: 2018_12_16_155624) do
     t.integer "escola_id"
     t.integer "periodo_id"
     t.integer "professor_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.index ["escola_id"], name: "index_salas_on_escola_id"
     t.index ["periodo_id"], name: "index_salas_on_periodo_id"
     t.index ["professor_id"], name: "index_salas_on_professor_id"

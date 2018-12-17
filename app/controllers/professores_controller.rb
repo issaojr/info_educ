@@ -24,11 +24,9 @@ class ProfessoresController < ApplicationController
 
   # POST /professores
   # POST /professores.json
-  def create
-    puts "**********" + professor_params.to_s
+  def create    
     categoria = Categoria.find(1)
-    professor_params[:categoria] = categoria
-    puts "**********" + professor_params.to_s
+    professor_params[:categoria] = categoria    
     @professor = Professor.new(professor_params)
 
 

@@ -1,6 +1,6 @@
 
     
-    <div class="container">
+    
       
       <div class="page-header">
         <h1>Sistema de Atribuição de aula</h1>
@@ -9,16 +9,12 @@
       <div class="row">
         <div class="col-sm-12">
           <h3>Opções</h3>
-          <%= link_to 'Cadastrar Professor', professores_path, class:"btn btn-default btn-block" %>          
+          <%= link_to 'Cadastro de Professores', professores_path, class:"btn btn-default btn-block" %>          
           <br />
-          <%= link_to 'Atribuição Para Professores Efetivos', 'atribuicao_escola#index', class:"btn btn-default btn-block" %>
+          <%= link_to '1ª Fase - Atribuição na Escola', 'atribuicao_escola#index', class:"btn btn-default btn-block" %>
           <br />
-          <%= link_to 'Atribuição Para Professores Temporários', professores_path, class:"btn btn-default btn-block" %>
+          <%= link_to '2ª Fase - Atribuição na Secretaria Municipal da Educação', 'atribuicao_secretaria#index', class:"btn btn-default btn-block" %>
           <br />
-          <%= link_to 'Consultar Atribuições', professores_path, class:"btn btn-default btn-block" %>
-          <br />
-         
+                  
         </div>
-      
-
     </div>

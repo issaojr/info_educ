@@ -1,35 +1,55 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Professores</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Nome</th>
-      <th>Registro</th>
-      <th>Nota prova</th>
-      <th>Pontuacao</th>
-      <th>Categoria</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <p id="notice">
+    <%= notice %>
+  </p>
 
-  <tbody>
-    <% @professores.each do |professor| %>
+  <h1>Professores</h1>
+
+  <table  class="table table-striped table-bordered table-hover table-condensed">
+    <thead>
       <tr>
-        <td><%= professor.nome %></td>
-        <td><%= professor.registro %></td>
-        <td><%= professor.nota_prova %></td>
-        <td><%= professor.pontuacao %></td>
-        <td><%= professor.categoria.descricao %></td>
-        <td><%= link_to 'Mostrar', professor %></td>
-        <td><%= link_to 'Editar', edit_professor_path(professor) %></td>
-        <td><%= link_to 'Excluir', professor, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
+        <th>Nome</th>
+        <th>Registro</th>
+        <th>Nota prova</th>
+        <th>Pontuacao</th>
+        <th>Categoria</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @professores.each do |professor| %>
+      <tr>
+        <td>
+          <%= professor.nome %>
+        </td>
+        <td>
+          <%= professor.registro %>
+        </td>
+        <td>
+          <%= professor.nota_prova %>
+        </td>
+        <td>
+          <%= professor.pontuacao %>
+        </td>
+        <td>
+          <%= professor.categoria.descricao %>
+        </td>
+        <td>
+          <%= link_to 'Mostrar', professor %>
+        </td>
+        <td>
+          <%= link_to 'Editar', edit_professor_path(professor) %>
+        </td>
+        <td>
+          <%= link_to 'Excluir', professor, method: :delete, data: { confirm: 'Tem certeza?' } %>
+        </td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<%= link_to 'Novo Professor', new_professor_path %>
+  <br>
+
+  <%= link_to 'Novo Professor', new_professor_path %>

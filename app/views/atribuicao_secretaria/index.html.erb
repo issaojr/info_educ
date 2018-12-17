@@ -6,8 +6,8 @@
   <thead>
     <tr>
       <th>Nome</th>
-      <th>Registro</th>     
-      <th>Pontuacao</th>
+      <th>Registro</th>
+      <th>Nota prova</th>
       <th>Categoria</th>
       <th ></th>
     </tr>
@@ -18,9 +18,9 @@
       <tr>
         <td><%= professor.nome %></td>
         <td><%= professor.registro %></td>
-        <td><%= professor.pontuacao %></td>
+        <td><%= professor.nota_prova %></td>
         <td><%= professor.categoria.descricao %></td>
-        <td><%= link_to 'Atribuir Sala', edit_atribuicao_escola_path(professor) %></td>
+        <td><%= link_to 'Atribuir Sala', edit_atribuicao_secretarium_path(professor) %></td>
         
       </tr>
     <% end %>
