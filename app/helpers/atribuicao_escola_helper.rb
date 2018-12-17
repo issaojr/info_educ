@@ -1,0 +1,2 @@
+module AtribuicaoEscolaHelper
+end

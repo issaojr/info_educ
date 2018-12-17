@@ -1,0 +1,24 @@
+<table>
+        <thead>
+          <tr>
+            <th>Descrição</th>
+            <th>Escola</th>
+            <th>Período</th>           
+            <th colspan="3"></th>
+          </tr>
+        </thead>
+      
+        <tbody>
+          <% @salas.each do |s| %>
+            <tr>
+              <td><%= s.descricao %></td>
+              <td><%= s.escola.nome %></td>
+              <td><%= s.periodo.descricao %></td>
+                           
+              <td><%= link_to 'Mostrar'%></td>
+              <td><%= link_to 'Editar' %></td>
+              <td><%= link_to 'Excluir' %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
